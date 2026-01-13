@@ -5,4 +5,11 @@ import express from "express" ;
 
 const coreCount = os.cpus().length ;
 
-console.log(coreCount)
+export const app = express();
+
+
+app.get("/",(req,res)=>{
+    res.json({message:"server is working"})
+})
+
+app.listen(3000)

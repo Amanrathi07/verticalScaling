@@ -9,5 +9,5 @@ const coreCount = os.cpus().length ;
 if(cluster.isPrimary){
     cluster.fork()
 }else{
-    app.listen(3001 )
+    app.listen(3000)
 }

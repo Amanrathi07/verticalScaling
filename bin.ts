@@ -7,7 +7,10 @@ const coreCount = os.cpus().length ;
 
 
 if(cluster.isPrimary){
-    cluster.fork()
+    
+    for(let i=0;i<coreCount;i++){
+        cluster.fork()
+    }
 }else{
     app.listen(3000)
 }
